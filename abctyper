@@ -1,0 +1,13 @@
+from pynput.keyboard import Key, Controller
+import time
+
+keyboard = Controller()
+
+def type():
+    time.sleep(5)
+    for i in range(97, 123):
+        #time.sleep(0.0005)
+        keyboard.press(chr(i))
+        keyboard.release(chr(i))
+        
+type()
